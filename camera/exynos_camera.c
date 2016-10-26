@@ -37,6 +37,8 @@
 #include <utils/Log.h>
 #include <utils/Timers.h>
 
+#include <MetadataBufferType.h>
+
 #include "exynos_camera.h"
 
 #define BIG2LITTLE_ENDIAN(big)	((big & 0xff) << 24 | (big & 0xff00) << 8 | (big & 0xff0000) >> 8 | (big & 0xff000000) >> 24)
@@ -2998,7 +3000,7 @@ int exynos_camera_recording(struct exynos_camera *exynos_camera)
 
 		addrs = (struct exynos_camera_addrs *) ((unsigned char *) memory->data + buffer_length * memory_index);
 		memset(addrs, 0, sizeof(struct exynos_camera_addrs));
-		addrs->type = 0; // kMetadataBufferTypeCameraSource
+		addrs->type = kMetadataBufferTypeNativeHandleSource;
 		addrs->index = memory_index;
 
 		exynos_camera_yuv_planes(width, height, format, memory_address, (int *) &addrs->y, (int *) &addrs->cbcr, NULL);

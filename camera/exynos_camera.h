@@ -31,6 +31,11 @@
 #include <jpeg_hal.h>
 #endif
 #include <Exif.h>
+#include <MetadataBufferType.h>
+
+#ifdef __cplusplus
+using namespace android;
+#endif
 
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
@@ -423,11 +428,8 @@ struct exynos_camera {
 };
 
 struct exynos_camera_addrs {
-	unsigned int type;
-	unsigned int y;
-	unsigned int cbcr;
-	unsigned int index;
-	unsigned int reserved;
+	MetadataBufferType type;
+	native_handle_t *pHandle;
 };
 
 // This is because the linux header uses anonymous union
