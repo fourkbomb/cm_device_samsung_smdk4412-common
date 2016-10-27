@@ -72,9 +72,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
 
 # Graphics
-BOARD_EGL_CFG := device/samsung/smdk4412-common/configs/egl.cfg
-BOARD_EGL_NEEDS_HANDLE_VALUE := true
-USE_OPENGL_RENDERER := true
+#BOARD_EGL_CFG := device/samsung/smdk4412-common/configs/egl.cfg
+#BOARD_EGL_NEEDS_HANDLE_VALUE := true
+USE_OPENGL_RENDERER := false
 BOARD_USES_SKIAHWJPEG := true
 COMMON_GLOBAL_CFLAGS += -DSEC_HWJPEG_G2D -DFORCE_SCREENSHOT_CPU_PATH -DWORKAROUND_BUG_10194508 -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -109,11 +109,6 @@ BOARD_USE_CSC_FIMC := false
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
-
-# Logging
-TARGET_USES_LOGD := false
-
-BOARD_USES_LEGACY_MMAP := true
 
 # RIL
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
@@ -161,7 +156,7 @@ BOARD_SEPOLICY_DIRS += device/samsung/smdk4412-common/selinux
 
 # Charging mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-BOARD_BATTERY_DEVICE_NAME := "battery"
+BOARD_BATTERY_DEVICE_NAME := "max170xx_battery"
 BOARD_CHARGER_ENABLE_SUSPEND := true
 RED_LED_PATH := /sys/class/leds/led_r/brightness
 GREEN_LED_PATH := /sys/class/leds/led_g/brightness
