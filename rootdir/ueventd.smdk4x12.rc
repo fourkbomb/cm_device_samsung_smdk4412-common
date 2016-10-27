@@ -81,8 +81,8 @@
 /dev/ttyUSB2              0666   system     system
 /dev/hsic*                0660   system     radio
 /dev/usb/lp*              0660   system     usb
-/dev/block/mmcblk0p4	  0660	 system	    radio
-/dev/block/mmcblk0p7	  0660	 system	    radio
+/dev/block/mmcblk1p4	  0660	 system	    radio
+/dev/block/mmcblk1p7	  0660	 system	    radio
 
 /dev/ttySAC*	          0660	 root	    system
 /dev/umts*                0660   system     radio
@@ -101,5 +101,5 @@
 /dev/ssp_sensorhub        0660   system     input
 
 # t0lte
-/dev/block/mmcblk0p10     0660   system     radio
+/dev/block/mmcblk1p10     0660   system     radio
 /dev/mdm                  0660   system     system
