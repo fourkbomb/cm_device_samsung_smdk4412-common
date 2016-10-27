@@ -174,5 +174,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.exynos4
 # LPM Battery Percentage
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
+ADDITIONAL_DEFAULT_PROPERTIES += ro.swgl=1
+
 # inherit from the proprietary version
 -include vendor/samsung/smdk4412-common/BoardConfigVendor.mk
